@@ -1,4 +1,4 @@
-https://www.semianalysis.com/p/google-we-have-no-moat-and-neither
+原文：https://www.semianalysis.com/p/google-we-have-no-moat-and-neither
 
 以下文字是一份最近被洩露的文件，由一位匿名人士在公共 Discord 伺服器上分享，並已授權重新發布。它來自 Google 內部的一名研究員。我們已經核實了其真實性。唯一的修改是格式調整和刪除了指向內部網頁的連結。該文件僅代表 Google 員工的觀點，而非整個公司。我們並不同意下面所寫的觀點，我們諮詢的其他研究人員也不同意，但我們將為訂閱者在另一篇文章中發表我們的意見。我們只是用來分享這個引發了很多有趣觀點的文件的工具。
 
