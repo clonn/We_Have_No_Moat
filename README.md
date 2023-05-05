@@ -147,4 +147,6 @@ They take the crucial step of measuring real human preferences between their mod
 April 15, 2023 - Open Source RLHF at ChatGPT Levels
 Open Assistant launches a model and, more importantly, a dataset for Alignment via RLHF. Their model is close (48.3% vs. 51.7%) to ChatGPT in terms of human preference. In addition to LLaMA, they show that this dataset can be applied to Pythia-12B, giving people the option to use a fully open stack to run the model. Moreover, because the dataset is publicly available, it takes RLHF from unachievable to cheap and easy for small experimenters.
 
+[https://i.imgur.com/SsMbPhF.png](https://i.imgur.com/SsMbPhF.png)
+
 [https://i.imgur.com/U9LNHoe.png](https://i.imgur.com/U9LNHoe.png)
