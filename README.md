@@ -1,152 +1,132 @@
 https://www.semianalysis.com/p/google-we-have-no-moat-and-neither
 
-Google "We Have No Moat, And Neither Does OpenAI"
-Leaked Internal Google Document Claims Open Source AI Will Outcompete Google and OpenAI
+以下文字是一份最近被洩露的文件，由一位匿名人士在公共 Discord 伺服器上分享，並已授權重新發布。它來自 Google 內部的一名研究員。我們已經核實了其真實性。唯一的修改是格式調整和刪除了指向內部網頁的連結。該文件僅代表 Google 員工的觀點，而非整個公司。我們並不同意下面所寫的觀點，我們諮詢的其他研究人員也不同意，但我們將為訂閱者在另一篇文章中發表我們的意見。我們只是用來分享這個引發了很多有趣觀點的文件的工具。
 
+## 我們沒有護城河
 
-DYLAN PATEL AND AFZAL AHMAD
-2023年5月4日
-∙ PAID
-The text below is a very recent leaked document, which was shared by an anonymous individual on a public Discord server who has granted permission for its republication. It originates from a researcher within Google. We have verified its authenticity. The only modifications are formatting and removing links to internal web pages. The document is only the opinion of a Google employee, not the entire firm. We do not agree with what is written below, nor do other researchers we asked, but we will publish our opinions on this in a separate piece for subscribers. We simply are a vessel to share this document which raises some very interesting points.
-SemiAnalysis is an ad-free reader-supported publication. To receive new posts, consider becoming a subscriber.
+### OpenAI 也沒有没有
 
-Type your email…
-Subscribe
-We Have No Moat
-And neither does OpenAI
-We’ve done a lot of looking over our shoulders at OpenAI. Who will cross the next milestone? What will the next move be?
+我們一直在關注 OpenAI 的動態。誰會達到下一個里程碑？下一步會是什麼？
 
-But the uncomfortable truth is, we aren’t positioned to win this arms race and neither is OpenAI. While we’ve been squabbling, a third faction has been quietly eating our lunch.
+但令人不安的事實是，我們並沒有擺好位置贏得這場軍備競賽，OpenAI 也是如此。在我們爭論的時候，第三方勢力已經在悄悄地搶占我們的市場份額。
 
-I’m talking, of course, about open source. Plainly put, they are lapping us. Things we consider “major open problems” are solved and in people’s hands today. Just to name a few:
+我當然是在談論開源。簡單地說，他們已經把我們甩在身後。我們認為的“重大開放性問題”已經得到解決，並被廣泛應用。僅舉幾個例子：
 
-LLMs on a Phone: People are running foundation models on a Pixel 6 at 5 tokens / sec.
+- 手機上的 LLMs：人們可以在 Pixel 6 手機上以每秒 5 個詞元 (Token) 的速度運行基礎模型。
+- 可擴展的個人 AI：你可以在一個晚上在你的筆記型電腦上微調一個個性化的 AI。
+- 負責任的發布：這個問題並沒有被“解決”，而是被“消除”。有整個網站充滿了沒有任何限制的藝術模型，而文本也即將迎頭趕上。
+- 多模態：目前多模態 ScienceQA 領域的最新技術成果僅用了一個小時就訓練出來了。
 
-Scalable Personal AI: You can finetune a personalized AI on your laptop in an evening.
+雖然我們的模型在質量上仍然佔有輕微優勢，但差距正在以驚人的速度縮小。開源模型更快、更具可訂製性、更注重隱私，性價比更高。他們用 100 美元和 130 億參數做到了我們在 1000 萬美元和 5400 億參數下努力實現的事情。而且他們只花了幾週，而不是幾個月。這對我們有深遠的影響：
 
-Responsible Release: This one isn’t “solved” so much as “obviated”. There are entire websites full of art models with no restrictions whatsoever, and text is not far behind.
+- 我們沒有秘密武器。我們最好的希望是學習和與 Google 以外的其他人合作。我們應該優先考慮支持第三方整合。
+- 當免費、無限制的替代品在質量上相當時，人們不會為受限制的模型付費。我們應該考慮我們的附加價值究竟在哪裡。
+- 巨大的模型正在拖慢我們的步伐。從長遠來看，最好的模型是那些可以快速迭代的模型。現在我們知道在 <20B 參數範疇內有什麼可能，我們應該將小型變體視為不只是一個附帶的想法。
 
-Multimodality: The current multimodal ScienceQA SOTA was trained in an hour.
+![https://lmsys.org/blog/2023-03-30-vicuna/](https://i.imgur.com/SsMbPhF.png)
 
-While our models still hold a slight edge in terms of quality, the gap is closing astonishingly quickly. Open-source models are faster, more customizable, more private, and pound-for-pound more capable. They are doing things with $100 and 13B params that we struggle with at $10M and 540B. And they are doing so in weeks, not months. This has profound implications for us:
+## 發生了甚麼事
 
-We have no secret sauce. Our best hope is to learn from and collaborate with what others are doing outside Google. We should prioritize enabling 3P integrations.
+三月初，開源社區得到了他們第一個真正有能力的基礎模型，因為 Meta 的 LLaMA 被洩露給了公眾。它沒有指令或對話調整，也沒有 RLHF。然而，社區立刻意識到了他們得到的東西的重要性。
 
-People will not pay for a restricted model when free, unrestricted alternatives are comparable in quality. We should consider where our value add really is.
+隨後是一波巨大的創新浪潮，每隔幾天就有重大的發展（詳見完整的時間表）。短短一個月後，我們看到了帶有指令調整、量化、質量改進、人類評估、多模態、RLHF 等等功能的變體，其中很多是相互構建的。
 
-Giant models are slowing us down. In the long run, the best models are the ones
+最重要的是，他們在很大程度上解決了擴展問題，使得任何人都可以嘗試。許多新想法來自普通人。訓練和實驗的門檻已經從一個大型研究機構的全部產出降低到一個人、一個晚上和一台性能強大的筆記型電腦。
 
-which can be iterated upon quickly. We should make small variants more than an afterthought, now that we know what is possible in the <20B parameter regime.
+## 為甚麼我們本可以預見
 
+在很多方面，這對任何人來說都不應該是一個驚喜。開源 LLM 的當前復興緊跟在圖像生成復興之後。社區並未忽略這些相似之處，許多人將這稱為 LLM 的“穩定擴散 (Stable Diffusion) 時刻”。
 
-https://lmsys.org/blog/2023-03-30-vicuna/
-What Happened
-At the beginning of March the open source community got their hands on their first really capable foundation model, as Meta’s LLaMA was leaked to the public. It had no instruction or conversation tuning, and no RLHF. Nonetheless, the community immediately understood the significance of what they had been given.
+在這兩種情況下，通過稱為低秩適應（LoRA）的更便宜的微調機制，以及規模上的重大突破（用於圖像合成的潛在擴散，用於 LLM 的 Chinchilla），都使得低成本的公共參與成為可能。在這兩種情況下，獲得足夠高品質的模型引發了來自世界各地個人和機構的一系列想法和迭代。在這兩種情況下，這些迅速超越了大型參與者。
 
-A tremendous outpouring of innovation followed, with just days between major developments (see The Timeline for the full breakdown). Here we are, barely a month later, and there are variants with instruction tuning, quantization, quality improvements, human evals, multimodality, RLHF, etc. etc. many of which build on each other.
+在圖像生成領域，這些貢獻起到了關鍵作用，使穩定擴散 (Stable Diffusion)與 Dall-E 走上了不同的道路。擁有開放模型導致了產品整合、市場、用戶界面和創新，這些都是 Dall-E 未曾實現的。
 
-Most importantly, they have solved the scaling problem to the extent that anyone can tinker. Many of the new ideas are from ordinary people. The barrier to entry for training and experimentation has dropped from the total output of a major research organization to one person, an evening, and a beefy laptop.
+效果是顯而易見的：在文化影響方面迅速壓倒了 OpenAI 的解決方案，後者變得越來越無關緊要。對於 LLM 是否會發生同樣的事情，尚有待觀察，但結構層面的相似性是相同的。
 
-Why We Could Have Seen It Coming
-In many ways, this shouldn’t be a surprise to anyone. The current renaissance in open source LLMs comes hot on the heels of a renaissance in image generation. The similarities are not lost on the community, with many calling this the “Stable Diffusion moment” for LLMs.
+## 我們錯過了甚麼
 
-In both cases, low-cost public involvement was enabled by a vastly cheaper mechanism for fine tuning called low rank adaptation, or LoRA, combined with a significant breakthrough in scale (latent diffusion for image synthesis, Chinchilla for LLMs). In both cases, access to a sufficiently high-quality model kicked off a flurry of ideas and iteration from individuals and institutions around the world. In both cases, this quickly outpaced the large players.
+驅動開源近期成功的創新直接解決了我們仍在努力解決的問題。更加關注他們的工作可以幫助我們避免重複發明輪子。
 
-These contributions were pivotal in the image generation space, setting Stable Diffusion on a different path from Dall-E. Having an open model led to product integrations, marketplaces, user interfaces, and innovations that didn’t happen for Dall-E.
+> LoRA 是一個非常強大的技術，我們可能應該更加關注
 
-The effect was palpable: rapid domination in terms of cultural impact vs the OpenAI solution, which became increasingly irrelevant. Whether the same thing will happen for LLMs remains to be seen, but the broad structural elements are the same.
+LoRA 透過將模型更新表示為低秩分解來工作，這可以將更新矩陣的大小降低多達幾千倍。這使得模型微調的成本和時間大大降低。在幾個小時內在消費者硬體上個性化語言模型是一個重要的突破，特別是對於涉及在近即時內納入新的和多樣化知識的願景。這項技術的存在在 Google 內部被低估了，儘管它直接影響到我們一些最具野心的項目。
 
-What We Missed
-The innovations that powered open source’s recent successes directly solve problems we’re still struggling with. Paying more attention to their work could help us to avoid reinventing the wheel.
+## 重新訓練模型是困難的道路
 
-LoRA is an incredibly powerful technique we should probably be paying more attention to
-LoRA works by representing model updates as low-rank factorizations, which reduces the size of the update matrices by a factor of up to several thousand. This allows model fine-tuning at a fraction of the cost and time. Being able to personalize a language model in a few hours on consumer hardware is a big deal, particularly for aspirations that involve incorporating new and diverse knowledge in near real-time. The fact that this technology exists is underexploited inside Google, even though it directly impacts some of our most ambitious projects.
+使 LoRA 如此有效的部分原因是它（像其他形式的微調一樣）是可堆疊的。像指令調整這樣的改進可以應用，然後在其他貢獻者添加對話、推理或工具使用時獲得優勢。雖然單個微調是低秩的，但它們的總和不一定是，允許隨著時間的推移，對模型進行全秩更新。
 
-Retraining models from scratch is the hard path
-Part of what makes LoRA so effective is that - like other forms of fine-tuning - it’s stackable. Improvements like instruction tuning can be applied and then leveraged as other contributors add on dialogue, or reasoning, or tool use. While the individual fine tunings are low rank, their sum need not be, allowing full-rank updates to the model to accumulate over time.
+這意味著隨著新的更好的數據集和任務變得可用，模型可以以低成本保持最新狀態，而無需支付完整運行的成本。
 
-This means that as new and better datasets and tasks become available, the model can be cheaply kept up to date, without ever having to pay the cost of a full run.
+相比之下，從頭開始訓練巨型模型不僅丟掉了預訓練，還丟掉了已經在頂部進行的迭代改進。在開源世界，這些改進很快就會佔據主導地位，使得完全重新訓練變得極為昂貴。
 
-By contrast, training giant models from scratch not only throws away the pretraining, but also any iterative improvements that have been made on top. In the open source world, it doesn’t take long before these improvements dominate, making a full retrain extremely costly.
+我們應該仔細考慮每個新的應用或想法是否真的需要一個全新的模型。如果我們確實有重大的架構改進，使我們無法直接重用模型權重，那麼我們應該投資於更具侵略性的蒸餾形式，以保留上一代模型盡可能多的功能。
 
-We should be thoughtful about whether each new application or idea really needs a whole new model. If we really do have major architectural improvements that preclude directly reusing model weights, then we should invest in more aggressive forms of distillation that allow us to retain as much of the previous generation’s capabilities as possible.
+## 長期來看，如果我們可以在小型模型上更快迭代，大型模型並不一定更具能力
 
-Large models aren’t more capable in the long run if we can iterate faster on small models
-LoRA updates are very cheap to produce (~$100) for the most popular model sizes. This means that almost anyone with an idea can generate one and distribute it. Training times under a day are the norm. At that pace, it doesn’t take long before the cumulative effect of all of these fine-tunings overcomes starting off at a size disadvantage. Indeed, in terms of engineer-hours, the pace of improvement from these models vastly outstrips what we can do with our largest variants, and the best are already largely indistinguishable from ChatGPT. Focusing on maintaining some of the largest models on the planet actually puts us at a disadvantage.
+對於最受歡迎的模型大小，LoRA 更新非常便宜（〜100 美元）。這意味著幾乎任何有想法的人都可以生成一個並分發出去。訓練時間在一天以內是常態。以這種速度，這些微調的累積效應很快就會克服起初的尺寸劣勢。事實上，從這些模型中改進的速度在工程師小時方面遠超我們對最大變種的能力，最好的模型已經與 ChatGPT 幾乎無法區分。專注於維護地球上一些最大的模型實際上讓我們處於劣勢。
 
-Data quality scales better than data size
-Many of these projects are saving time by training on small, highly curated datasets. This suggests there is some flexibility in data scaling laws. The existence of such datasets follows from the line of thinking in Data Doesn't Do What You Think, and they are rapidly becoming the standard way to do training outside Google. These datasets are built using synthetic methods (e.g. filtering the best responses from an existing model) and scavenging from other projects, neither of which is dominant at Google. Fortunately, these high quality datasets are open source, so they are free to use.
+## 數據質量比數據大小更具擴展性
 
-Directly Competing With Open Source Is a Losing Proposition
-This recent progress has direct, immediate implications for our business strategy. Who would pay for a Google product with usage restrictions if there is a free, high quality alternative without them?
+許多這些項目通過在小型、精心策劃的數據集上進行訓練來節省時間。這表明數據縮放法則具有一定的靈活性。這些數據集的存在源於《數據並非如你所想》中的思路，它們迅速成為 Google 之外進行訓練的標準方法。這些數據集是使用合成方法（例如從現有模型中過濾最佳響應）和從其他項目中收集而來的，這兩者在 Google 都不占主導地位。幸運的是，這些高品質數據集是開源的，因此可以免費使用。
 
-And we should not expect to be able to catch up. The modern internet runs on open source for a reason. Open source has some significant advantages that we cannot replicate.
+## 直接與開源競爭是輸不起的
 
-We need them more than they need us
-Keeping our technology secret was always a tenuous proposition. Google researchers are leaving for other companies on a regular cadence, so we can assume they know everything we know, and will continue to for as long as that pipeline is open.
+這些最近的進展對我們的商業策略有直接、立即的影響。如果有免費、高品質的替代品而沒有使用限制，誰會願意付錢使用有使用限制的 Google 產品？
 
-But holding on to a competitive advantage in technology becomes even harder now that cutting edge research in LLMs is affordable. Research institutions all over the world are building on each other’s work, exploring the solution space in a breadth-first way that far outstrips our own capacity. We can try to hold tightly to our secrets while outside innovation dilutes their value, or we can try to learn from each other.
+我們也不應期望能迎頭趕上。現代網路之所以依賴開源，是有原因的。開源具有我們無法模仿的一些顯著優勢。
 
-Individuals are not constrained by licenses to the same degree as corporations
-Much of this innovation is happening on top of the leaked model weights from Meta. While this will inevitably change as truly open models get better, the point is that they don’t have to wait. The legal cover afforded by “personal use” and the impracticality of prosecuting individuals means that individuals are getting access to these technologies while they are hot.
+## 我們需要他們比他們需要我們更多
 
-Being your own customer means you understand the use case
-Browsing through the models that people are creating in the image generation space, there is a vast outpouring of creativity, from anime generators to HDR landscapes. These models are used and created by people who are deeply immersed in their particular subgenre, lending a depth of knowledge and empathy we cannot hope to match.
+始終保持我們技術的秘密本來就是一個薄弱的立場。Google 的研究員們以固定節奏離職去其他公司，所以我們可以假定他們知道我們所知道的一切，並且只要這條通道保持開放，他們就會繼續這樣做。
 
-Owning the Ecosystem: Letting Open Source Work for Us
-Paradoxically, the one clear winner in all of this is Meta. Because the leaked model was theirs, they have effectively garnered an entire planet's worth of free labor. Since most open source innovation is happening on top of their architecture, there is nothing stopping them from directly incorporating it into their products.
+但在 LLM（大型語言模型）的前沿研究變得負擔得起的情況下，保持技術競爭優勢變得更加困難。世界各地的研究機構在彼此的基礎上建立成果，以一種遠超我們自身能力的廣度優先的方式探索解決方案空間。我們可以努力緊緊抱住我們的秘密，而外部創新削弱它們的價值，或者我們可以努力互相學習。
 
-The value of owning the ecosystem cannot be overstated. Google itself has successfully used this paradigm in its open source offerings, like Chrome and Android. By owning the platform where innovation happens, Google cements itself as a thought leader and direction-setter, earning the ability to shape the narrative on ideas that are larger than itself.
+## 與公司相比，個人受許可限制的程度要低得多
 
-The more tightly we control our models, the more attractive we make open alternatives. Google and OpenAI have both gravitated defensively toward release patterns that allow them to retain tight control over how their models are used. But this control is a fiction. Anyone seeking to use LLMs for unsanctioned purposes can simply take their pick of the freely available models.
+這些創新大部分是基於 Meta 洩露的模型權重之上。雖然隨著真正的開源模型變得更好，這種情況必然會改變，但重點是他們不必等待。法律對“個人使用”的保護和起訴個人的不切實際性意味著個人在這些技術火熱的時候就可以獲得這些技術。
 
-Google should establish itself a leader in the open source community, taking the lead by cooperating with, rather than ignoring, the broader conversation. This probably means taking some uncomfortable steps, like publishing the model weights for small ULM variants. This necessarily means relinquishing some control over our models. But this compromise is inevitable. We cannot hope to both drive innovation and control it.
+## 作為自己的客戶意味著您了解用例
 
-Epilogue: What about OpenAI?
-All this talk of open source can feel unfair given OpenAI’s current closed policy. Why do we have to share, if they won’t? But the fact of the matter is, we are already sharing everything with them in the form of the steady flow of poached senior researchers. Until we stem that tide, secrecy is a moot point.
+瀏覽人們在圖像生成領域創建的模型，有著大量的創意湧現，從動漫生成器到 HDR 風景。這些模型是由深度沉浸在特定子類型的人們使用和創建的，這使得他們具有深厚的知識和同理心，這是我們無法望其項背的。
 
-And in the end, OpenAI doesn’t matter. They are making the same mistakes we are in their posture relative to open source, and their ability to maintain an edge is necessarily in question. Open source alternatives can and will eventually eclipse them unless they change their stance. In this respect, at least, we can make the first move.
+與其競爭，我們應該與開源領域合作。我們應該重視與第三方整合，並充分利用開放資源。這不僅有助於我們提高自己的產品和服務，還有助於擴大市場。
 
-The Timeline
-Feb 24, 2023 - LLaMA is Launched
-Meta launches LLaMA, open sourcing the code, but not the weights. At this point, LLaMA is not instruction or conversation tuned. Like many current models, it is a relatively small model (available at 7B, 13B, 33B, and 65B parameters) that has been trained for a relatively large amount of time, and is therefore quite capable relative to its size.
+人們不會為具有使用限制的模型付費，而免費、無限制的替代品在質量上具有可比性。我們應該思考我們的價值增值究竟在哪裡。
 
-March 3, 2023 - The Inevitable Happens
-Within a week, LLaMA is leaked to the public. The impact on the community cannot be overstated. Existing licenses prevent it from being used for commercial purposes, but suddenly anyone is able to experiment. From this point forward, innovations come hard and fast.
+大型模型讓我們速度變慢。從長遠來看，最好的模型是那些可以快速迭代的模型。現在我們知道在 <20B 參數範疇內有可能實現什麼，我們應該讓小變種更多地成為我們的思考對象。
 
-March 12, 2023 - Language models on a Toaster
-A little over a week later, Artem Andreenko gets the model working on a Raspberry Pi. At this point the model runs too slowly to be practical because the weights must be paged in and out of memory. Nonetheless, this sets the stage for an onslaught of minification efforts.
+> 擁有生態系統：讓開源為我們效力
 
-March 13, 2023 - Fine Tuning on a Laptop
-The next day, Stanford releases Alpaca, which adds instruction tuning to LLaMA. More important than the actual weights, however, was Eric Wang’s alpaca-lora repo, which used low rank fine-tuning to do this training “within hours on a single RTX 4090”.
+矛盾的是，所有這些中唯一明確的贏家是 Meta。因為外洩的模型是他們的，所以他們實際上獲得了整個地球的免費勞動力。由於大部分開源創新都是基於他們的架構之上，因此他們可以直接將其納入自己的產品。
 
-Suddenly, anyone could fine-tune the model to do anything, kicking off a race to the bottom on low-budget fine-tuning projects. Papers proudly describe their total spend of a few hundred dollars. What’s more, the low rank updates can be distributed easily and separately from the original weights, making them independent of the original license from Meta. Anyone can share and apply them.
+擁有生態系統的價值不容忽視。Google 本身已經成功地在其開源產品中使用了這一範例，例如 Chrome 和 Android。通過擁有創新發生的平台，Google 將自己鞏固為思想領袖和方向制定者，獲得塑造比自身更大思想敘事的能力。
 
-March 18, 2023 - Now It’s Fast
-Georgi Gerganov uses 4 bit quantization to run LLaMA on a MacBook CPU. It is the first “no GPU” solution that is fast enough to be practical.
+我們對模型的控制越緊密，就越能使開放替代品變得更有吸引力。Google 和 OpenAI 都在防守上趨向於發布模式，這使他們能夠緊密控制模型的使用方式。但這種控制是虛構的。任何想要將 LLM 用於未經批准的目的的人都可以選擇免費提供的模型。
 
-March 19, 2023 - A 13B model achieves “parity” with Bard
-The next day, a cross-university collaboration releases Vicuna, and uses GPT-4-powered eval to provide qualitative comparisons of model outputs. While the evaluation method is suspect, the model is materially better than earlier variants. Training Cost: $300.
+Google 應該在開源社區中建立自己的領導地位，與更廣泛的對話合作，而不是忽視它。這可能意味著採取一些令人不安的措施，例如發布小型 ULM 變體的模型權重。這必然意味著放棄對我們模型的部分控制。但這種妥協是不可避免的。我們無法在推動創新和控制創新之間兼顧。
 
-Notably, they were able to use data from ChatGPT while circumventing restrictions on its API - They simply sampled examples of “impressive” ChatGPT dialogue posted on sites like ShareGPT.
+## 後記：OpenAI 呢？
 
-March 25, 2023 - Choose Your Own Model
-Nomic creates GPT4All, which is both a model and, more importantly, an ecosystem. For the first time, we see models (including Vicuna) being gathered together in one place. Training Cost: $100.
+所有關於開源的談話可能讓人覺得不公平，因為 OpenAI 目前的封閉政策。如果他們不分享，為什麼我們要分享？但事實上，我們已經在以挖走高級研究員的形式與他們分享一切。除非我們遏制這股潮流，否則保密是毫無意義的。
 
-March 28, 2023 - Open Source GPT-3
-Cerebras (not to be confused with our own Cerebra) trains the GPT-3 architecture using the optimal compute schedule implied by Chinchilla, and the optimal scaling implied by μ-parameterization. This outperforms existing GPT-3 clones by a wide margin, and represents the first confirmed use of μ-parameterization “in the wild”. These models are trained from scratch, meaning the community is no longer dependent on LLaMA.
+最後，OpenAI 並不重要。他們在與開源相對立的立場上犯了與我們一樣的錯誤，因此他們保持競爭優勢的能力必然受到質疑。開源替代品可以並最終會取代他們，除非他們改變立場。至少在這一方面，我們可以先行一步。
 
-March 28, 2023 - Multimodal Training in One Hour
-Using a novel Parameter Efficient Fine Tuning (PEFT) technique, LLaMA-Adapter introduces instruction tuning and multimodality in one hour of training. Impressively, they do so with just 1.2M learnable parameters. The model achieves a new SOTA on multimodal ScienceQA.
+## 時間表
 
-April 3, 2023 - Real Humans Can’t Tell the Difference Between a 13B Open Model and ChatGPT
-Berkeley launches Koala, a dialogue model trained entirely using freely available data.
+| 日期 | 事件 | 描述 |
+| ---- | ---- | ---- |
+| 2023 年 2 月 24 日 | LLaMA 啟動 | Meta 推出 LLaMA，開放原始碼，但未公開權重。此時，LLaMA 沒有指令或對話調校。與許多當前模型一樣，它是一個相對較小的模型（可選擇的參數有 7B、13B、33B 和 65B），經過相對較長時間的訓練，因此相對於其大小具有相當的能力。 |
+| 2023 年 3 月 3 日| 無法避免的事情發生 | 一周內，LLaMA 被泄露給公眾。對社區的影響不可估量。現有許可證禁止將其用於商業目的，但突然之間，任何人都可以進行實驗。從這時起，創新接踵而至。|
+| 2023 年 3 月 12 日 | 吐司機上的語言模型 | 一周多以後，Artem Andreenko 讓模型在樹莓派上運行。此時，由於權重必須在內存中進行分頁，模型運行速度過慢，無法實用。然而，這為後續的迷你化努力鋪平了道路。 |
+| 2023 年 3 月 13 日 | 筆記本電腦上的微調| 第二天，斯坦福大學發布了 Alpaca，為 LLaMA 添加了指令調校。然而，比實際權重更重要的是 Eric Wang 的 alpaca-lora 倉庫，該倉庫使用低秩微調在“單個 RTX 4090 上花費幾個小時”完成此訓練。|
+| 2023 年 3 月 18 日 | 現在它很快了| Georgi Gerganov 使用 4 位量化使 LLaMA 在 MacBook CPU 上運行。這是第一個足夠快的“無 GPU”解決方案，可以實際使用。|
+| 2023 年 3 月 19 日 | 13B 模型與 Bard 達到“對等” | 第二天，一個跨大學合作團隊發布了 Vicuna，並使用 GPT-4 驅動的 eval 對模型輸出進行定性比較。雖然評估 |
+| 2023 年 3 月 25 日 | 選擇您自己的模型| Nomic 創建了 GPT4All，既是一個模型，更重要的是一個生態系統。我們首次看到模型（包括 Vicuna）在一個地方聚集在一起。訓練成本：100 美元。|
+| 2023 年 3 月 28 日 | 開源 GPT-3 | Cerebras（不要與我們自己的 Cerebra 混淆）使用 Chinchilla 隱含的最佳計算計劃和 μ-參數化的最佳擴展訓練 GPT-3 架構。這在很大程度上超越了現有的 GPT-3 克隆，並代表了“現實中”的第一個 μ-參數化的確認使用。這些模型是從頭開始訓練的，這意味著社區不再依賴於 LLaMA。 |
+| 2023 年 3 月 28 日 | 一小時內的多模態訓練| 使用一種新穎的參數高效微調（PEFT）技術，LLaMA-Adapter 在一小時內引入了指令調校和多模態性。令人印象深刻的是，他們只使用了 120 萬可學習參數。該模型在多模態 ScienceQA 上實現了新的 SOTA。|
+| 2023 年 4 月 3 日| 真正的人類無法區分 13B 開源模型和 ChatGPT | 伯克利大學推出了 Koala，這是一個完全使用可免費獲得的數據進行訓練的對話模型。他們採取了衡量真實人類在他們的模型和 ChatGPT 之間的偏好的關鍵一步。儘管 ChatGPT 仍然具有微弱的優勢，但超過 50% 的時間，用戶要么偏愛 Koala，要么沒有偏好。訓練成本：100 美元。 |
+| 2023 年 4 月 15 日 | ChatGPT 等級的開源 RLHF | Open Assistant 推出了一個模型，更重要的是，推出了一個通過 RLHF 進行對齊的數據集。在人類偏好方面，他們的模型接近 ChatGPT（48.3% vs. 51.7%）。除了 LLaMA 之外，他們還展示了該數據集可以應用於 Pythia-12B，讓人們有機會使用完全開放的技術棧來運行該模型。此外，由於數據集是公開可用的，它使得 RLHF 對於小型實驗者而言從無法實現變得便宜並且容易。 |
 
-They take the crucial step of measuring real human preferences between their model and ChatGPT. While ChatGPT still holds a slight edge, more than 50% of the time users either prefer Koala or have no preference. Training Cost: $100.
-
-April 15, 2023 - Open Source RLHF at ChatGPT Levels
-Open Assistant launches a model and, more importantly, a dataset for Alignment via RLHF. Their model is close (48.3% vs. 51.7%) to ChatGPT in terms of human preference. In addition to LLaMA, they show that this dataset can be applied to Pythia-12B, giving people the option to use a fully open stack to run the model. Moreover, because the dataset is publicly available, it takes RLHF from unachievable to cheap and easy for small experimenters.
 
 ![https://i.imgur.com/SsMbPhF.png](https://i.imgur.com/SsMbPhF.png)
 
-![https://i.imgur.com/U9LNHoe.png](https://i.imgur.com/U9LNHoe.png)
